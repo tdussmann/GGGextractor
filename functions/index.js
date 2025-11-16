@@ -73,8 +73,18 @@ app.post('/api/extractGrid', async (req, res) => {
   }
 });
 
+// Options for express.static to handle .ts/.tsx files
+const staticOptions = {
+  setHeaders: (res, filePath) => {
+    // Set correct MIME type for TypeScript/TSX files for browser modules
+    if (filePath.endsWith('.tsx') || filePath.endsWith('.ts')) {
+      res.setHeader('Content-Type', 'text/javascript');
+    }
+  },
+};
+
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), staticOptions));
 
 // For any other GET request, send the index.html file to support client-side routing
 app.get('*', (req, res) => {
