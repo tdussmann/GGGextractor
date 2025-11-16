@@ -1,11 +1,11 @@
 
 import React, { useState, useCallback, useMemo } from 'react';
-import { extractGridFromImage } from './services/geminiService';
-import { UploadIcon } from './components/icons/UploadIcon';
-import { CopyIcon } from './components/icons/CopyIcon';
-import { ShareIcon } from './components/icons/ShareIcon';
-import { SpinnerIcon } from './components/icons/SpinnerIcon';
-import { CheckIcon } from './components/icons/CheckIcon';
+import { extractGridFromImage } from './services/geminiService.ts';
+import { UploadIcon } from './components/icons/UploadIcon.tsx';
+import { CopyIcon } from './components/icons/CopyIcon.tsx';
+import { ShareIcon } from './components/icons/ShareIcon.tsx';
+import { SpinnerIcon } from './components/icons/SpinnerIcon.tsx';
+import { CheckIcon } from './components/icons/CheckIcon.tsx';
 
 const App: React.FC = () => {
   const [imageFile, setImageFile] = useState<File | null>(null);
