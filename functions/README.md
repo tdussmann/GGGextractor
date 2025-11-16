@@ -30,11 +30,11 @@ Follow these steps to deploy the function using the `gcloud` CLI.
     You will need to replace `YOUR_GEMINI_API_KEY` in the command below with the actual key you obtained from Google AI Studio.
 
 3.  **Deploy the Function**:
-    Run the following command. This command deploys the function to the `europe-west3` region, sets the Node.js 14 runtime, and allows public access so you can use the web app.
+    Run the following command. This command deploys the function to the `europe-west3` region, sets the Node.js 22 runtime, and allows public access so you can use the web app.
 
     ```bash
     gcloud functions deploy extractGrid \
-      --runtime nodejs14 \
+      --runtime nodejs22 \
       --trigger-http \
       --entry-point extractGrid \
       --region europe-west3 \
