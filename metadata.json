@@ -1,0 +1,5 @@
+{
+  "name": "GGG Extractor",
+  "description": "An application to upload a screenshot of a 3x3 grid of countries, extract the information using AI, and provide options to share or copy the formatted text.",
+  "requestFramePermissions": []
+}

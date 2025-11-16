@@ -1,0 +1,15 @@
+{
+  "name": "grid-extractor-function",
+  "version": "1.0.0",
+  "description": "Cloud function to extract grid from image using Gemini and serve the frontend.",
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.0.0",
+    "@google/genai": "^1.29.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": "14"
+  }
+}
